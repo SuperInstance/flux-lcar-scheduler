@@ -229,7 +229,7 @@ if __name__ == "__main__":
     for task in scheduled:
         print(f"  {task.task_id}: {task.description[:40]} → {task.assigned_model} (P{task.priority})")
     
-    print(f"\n{len(sched.status()['pending_tasks'])} tasks waiting for better time slots")
+    print(f"\n{sched.status()['pending_tasks']} tasks waiting for better time slots")
     
     # Complete some tasks
     sched.complete_task("T01", 1800)
